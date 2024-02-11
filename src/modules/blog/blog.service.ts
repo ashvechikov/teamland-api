@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { IBlogService } from './repository/blog.interface';
+import { IBlogService } from './blog-service.interface';
 import { IRepository } from '../../repository.interface';
-import { IBlog } from './model/blog.interface';
+import { IBlog } from './blog.interface';
 
 @Injectable()
 export class BlogService implements IBlogService {
