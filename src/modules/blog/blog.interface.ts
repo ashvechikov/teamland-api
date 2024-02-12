@@ -1,4 +1,4 @@
-import { IBlog } from '../model/blog.interface';
+import { IBlog } from './blog.entity';
 
 export interface IBlogService {
   getBlog(id: number): Promise<IBlog>;
