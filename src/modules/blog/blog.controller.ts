@@ -1,9 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
-import { IBlogService } from './blog.interface';
+import { BlogService } from './blog.service';
 
 @Controller()
 export class BlogController {
-  constructor(private readonly service: IBlogService) {}
+  constructor(private readonly service: BlogService) {}
 
   @Get()
   get(id: number) {
