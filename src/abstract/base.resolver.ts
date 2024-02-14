@@ -1,7 +1,7 @@
-import { Type } from '@nestjs/common';
-import { Resolver, Query, Args, Mutation, Int } from '@nestjs/graphql';
-import { IRepository } from './repository.interface';
-import { capitalize } from 'lodash';
+import { Type } from "@nestjs/common";
+import { Args, Int, Mutation, Query, Resolver } from "@nestjs/graphql";
+import { IRepository } from "./repository.interface";
+import { capitalize } from "lodash";
 
 type Constructor<I> = new (...args: any[]) => I;
 
@@ -35,7 +35,7 @@ export function BaseResolver<T, C, U>(
       name: `get${capitalize(entityType.name)}`,
       nullable: true,
     })
-    getById(@Args('id', { type: () => Int }) id: number) {
+    getById(@Args("id", { type: () => Int }) id: number) {
       return this.repository.get(id);
     }
 
@@ -68,7 +68,7 @@ export function BaseResolver<T, C, U>(
     @Mutation(() => entityType, {
       name: `remove${capitalize(entityType.name)}`,
     })
-    remove(@Args('id', { type: () => Int }) id: number) {
+    remove(@Args("id", { type: () => Int }) id: number) {
       return this.repository.remove(id);
     }
   }
