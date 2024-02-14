@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IRepository } from '../../repository.interface';
+import { IRepository } from '../../abstract/repository.interface';
 import { IBlog } from './blog.entity';
 
 @Injectable()

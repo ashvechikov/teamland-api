@@ -1,4 +1,4 @@
-import { IEntity } from '../../entity.interface';
+import { IEntity } from '../../abstract/entity.interface';
 
 export interface IBlog extends IEntity {
   published: Date;
