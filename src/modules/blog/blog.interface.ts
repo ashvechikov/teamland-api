@@ -1,5 +1,5 @@
-import { IBlog } from './blog.entity';
+import { Blog } from './blog.entity';
 
 export interface IBlogService {
-  getBlog(id: number): Promise<IBlog>;
+  getBlog(id: number): Promise<Blog>;
 }

@@ -1,6 +1,11 @@
-import { IEntity } from '../../abstract/entity.interface';
+import { ObjectType, Field } from '@nestjs/graphql';
+import { BaseEntity } from '../../abstract/entity.interface';
 
-export interface IBlog extends IEntity {
+@ObjectType()
+export class Blog extends BaseEntity {
+  @Field()
   published: Date;
+
+  @Field()
   isDraft: boolean;
 }

@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { IRepository } from '../../abstract/repository.interface';
-import { IBlog } from './blog.entity';
+import { Blog } from './blog.entity';
 
 @Injectable()
-export class BlogRepository implements IRepository<IBlog> {
-  get(id: number): Promise<IBlog> {
+export class BlogRepository implements IRepository<Blog> {
+  get(id: number): Promise<Blog> {
     console.log(id);
     throw new Error('Method not implemented.');
   }
@@ -12,11 +12,11 @@ export class BlogRepository implements IRepository<IBlog> {
     console.log(id);
     throw new Error('Method not implemented.');
   }
-  save(input: IBlog): Promise<void> {
+  save(input: Blog): Promise<void> {
     console.log(input);
     throw new Error('Method not implemented.');
   }
-  update(input: IBlog): Promise<IBlog> {
+  update(input: Blog): Promise<Blog> {
     console.log(input);
     throw new Error('Method not implemented.');
   }
