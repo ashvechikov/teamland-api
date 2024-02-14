@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { IBlogService } from './blog.interface';
 import { IBlog } from './blog.entity';
-import { IRepository } from 'src/repository.interface';
+import { BlogRepository } from './blog.repository';
 
 @Injectable()
 export class BlogService implements IBlogService {
-  constructor(private readonly repository: IRepository<IBlog>) {}
+  constructor(private readonly repository: BlogRepository) {}
 
   getBlog(id: number): Promise<IBlog> {
     return this.repository.get(id);
